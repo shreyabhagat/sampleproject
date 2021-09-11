@@ -8,7 +8,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.deepOrange),
       themeMode: ThemeMode.light,
-      initialRoute: "/home",
+      //initialRoute: "/home",
       routes: {
         "/": (context) => const LoginPage(),
         "/home": (context) => const HomePage(),
