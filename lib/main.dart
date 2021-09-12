@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampleproject/Pages/Home_Page.dart';
 import 'package:sampleproject/Pages/login_page.dart';
 
 void main() {
@@ -8,11 +9,11 @@ void main() {
       theme: ThemeData(primaryColor: Colors.deepOrange),
       themeMode: ThemeMode.light,
       home: const LoginPage(),
-      //initialRoute: "/home",
-      // routes: {
-      //   "/": (context) => const LoginPage(),
-      //   "/home": (context) => const HomePage(),
-      // },
+      initialRoute: "/home",
+      routes: {
+        "/login": (context) => const LoginPage(),
+        "/home": (context) => const HomePage(),
+      },
     ),
   );
 }
