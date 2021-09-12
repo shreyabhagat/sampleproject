@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sampleproject/Pages/Home_Page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -46,13 +47,19 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                ElevatedButton(
-                  style: const ButtonStyle(
-                    alignment: Alignment.center,
-                  ),
-                  onPressed: () {},
-                  child: const Text('Login'),
-                ),
+                MaterialButton(
+                    animationDuration: const Duration(seconds: 2),
+                    textColor: Colors.white,
+                    color: Colors.lightBlueAccent.shade700,
+                    child: const Text('Login'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                      );
+                    })
               ],
             ),
           )
